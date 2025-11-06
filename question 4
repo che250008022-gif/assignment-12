@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+class Box {
+private:
+    double length;
+    double breadth;
+    double height;
+public:
+    Box() {
+        length = 1;
+        breadth = 1;
+        height = 1;
+    }
+    Box(double l) {
+        length = l;
+        breadth = 1;
+        height = 1;
+    }
+    Box(double l, double b, double h) {
+        length = l;
+        breadth = b;
+        height = h;
+    }
+    void displayVolume() {
+        double volume = length * breadth * height;
+        cout << "Volume of the Box: " << volume << endl;
+    }
+};
+int main() {
+    Box box1;       
+    cout << "Box 1 : ";
+    box1.displayVolume(); 
+    Box box2(5);       
+    cout << "Box 2 : ";
+    box2.displayVolume(); 
+    Box box3(3, 4, 2);   
+    cout << "Box 3 : ";
+    box3.displayVolume();
+    return 0;
+}
